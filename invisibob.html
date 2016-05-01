@@ -12,7 +12,15 @@
 <link href="css/foundation.css" rel="stylesheet">
 <link href="css/normalize.css" rel="stylesheet">
 <script src="js/vendor/jquery.js"></script>
-<title>Mangesh Thombare</title>
+<script src="js/responsiveslides.min.js"></script>
+<script>
+	$(function() {	
+$(".rslides").responsiveSlides({
+  auto: true, speed: 1000, timeout: 4000, pager: false, nav: false, random: false, pause: true, pauseControls: true, maxwidth: "500", namespace: "rslides" });
+});
+</script>
+<title>Invisibob</title>
+
 </head>
 <body>
 <header>
@@ -45,18 +53,29 @@
 </header>
 <div class="row">
 <div class="content">
+<h2>Invisibob: A Game in Construct 2</h2>
+<div class="panel"><p><span class="hl">Game: </span>Invisibob</p>
+<p><span class="hl">Genre: </span>Platformer</p>
+<p><span class="hl">Platform: </span>Windows</p>
+<p><span class="hl">Target Audience: </span>Platformer and Indie game lovers</p>
+<p><span class="hl">View: </span>2-D Side scroller</p></div>
+<p>Playable link for the game: <a href="http://invisibob.clay.io" target="_blank">Invisibob</a></p>
+<p>This was a team assignment. We created this game in 4 days. We used Construct 2 engine and managed to create 5 fully functional levels of the game.</p>
+<p>My role in the project was of the Lead Game Designer. I designed the whole concept single handedly.</p>
+<p><span class="hl">Screenshots: </span></p>
 
-<h2>Hello...</h2>
-<div class="th right"><img src="images/me.png" alt="me"></div>
-<p>My name is Mangesh Thombare.</p>
-<p>I am a student of Video Game Design and Project Management at DSK SUPINFOGAME, Pune (INDIA). I will be completing my course in May 2014 and I am looking forward to join the Game Design industry after that.</p>
-<p>During my course I’ve acquired many skills in the field of Game design and Level Design. I’ve learned the process of designing a game in pre-production as well as production stage.</p>
-<p>This website showcases all the projects I've done as a part of my course. It includes my work as a Game Designer and a Level Designer. You can find a summary of my skills, abilities and creativity in the game design field on the CV page.</p>
-<p>I am looking for an internship or a permanent job in the field of Game Design. The challenge of creating a feasible and sellable concept in short period of time appeals the most to the gamer within me.</p>
-<p>Here is something I’m currently working on - <a href="no_light.html">No Light</a></p>
+<div class="panel clearfix wrap">
+<ul class="rslides row">
+  <li><img src="images/invi01.png" alt="slide1"></li>
+  <li><img src="images/invi02.png" alt="slide2"></li>
+  <li><img src="images/invi03.png" alt="slide3"></li>
+  <li><img src="images/invi04.png" alt="slide4"></li>
+</ul>
+</div>
 
 </div>
 </div>
+
 <footer><div class="row"><p>&copy; 2014 - mangeshthombare.com<span> | </span>Designed By - <a href="http://weboreviews.com" target="_blank">Web-o-Reviews</a></p></div>
 </footer>
 <script src="js/doubletaptogo.min.js"></script>

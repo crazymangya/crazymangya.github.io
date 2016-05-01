@@ -1,0 +1,91 @@
+/* CSS Document */
+/*  
+Author: Akshay Ghate
+Date: 16/03/2014
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic);
+body { background: url(../images/bg.jpg) #f4f5ff; font-family: 'Open Sans', sans-serif; -ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%; font-size:0.9375em; padding:0; margin:0; line-height: 1; font-weight:400; color:#333; -webkit-font-smoothing: antialiased;}
+header { background: top left repeat-x #4dbff5; height: 80px;  box-shadow:0 1px 3px rgba(0, 0, 0, 0.4); -moz-box-shadow:0 1px 3px rgba(0, 0, 0, 0.4); -webkit-box-shadow:0 1px 3px rgba(0, 0, 0, 0.4); }
+.content { min-height: 700px; background-color: #fff; margin: 50px 20px; padding: 10px 20px;  box-shadow:0 1px 3px rgba(0, 0, 0, 0.4); -moz-box-shadow:0 1px 3px rgba(0, 0, 0, 0.4); -webkit-box-shadow:0 1px 3px rgba(0, 0, 0, 0.4); }
+/*--------------------Styles----------------------*/
+h2 { color: #22b0f3; padding: 10px 0 30px 60px; font-weight: 400; font-style: normal; }
+
+.content p { padding-left: 20px;}
+.img-bt { margin-bottom: 20px;}
+.hl { color: #22b0f3; font-weight: 600; padding-right: 10px;}
+.mx-wd {max-width: 800px; margin-top: 50px;}
+
+.wrap { max-width: 548px;}
+.wrap1 { max-width: 948px;}
+.ho:hover { cursor: pointer;}
+.rslides { position: relative; list-style: none; overflow: hidden; width: 100%; padding: 0; margin: 0;}
+.rslides li { -webkit-backface-visibility: hidden; position: absolute; display: none; width: 100%; left: 0; top: 0;}
+.rslides li:first-child { position: relative; display: block; float: left;}
+.rslides img { display: block; height: auto; float: left; width: 100%; border: 0;}
+
+/*-------------------Footer-----------------------*/
+footer { background: top left repeat-x #4dbff5; min-height: 100px;  box-shadow:0 -1px 3px rgba(0, 0, 0, 0.4); -moz-box-shadow:0 -1px 3px rgba(0, 0, 0, 0.4); -webkit-box-shadow:0 -1px 3px rgba(0, 0, 0, 0.4); }
+footer p { color:#fff; padding:15px 0 0 60px; font-weight: 400; }
+footer a { color:#fff; -webkit-transition: color 300ms ease-out; -moz-transition: color 300ms ease-out; transition: color 300ms ease-out; }
+footer a:hover { color: #333;}
+/*-----------------Navigation---------------------*/
+nav { float: right;}
+#nav { width: 50em; /* 800 */ font-family: 'Open Sans', sans-serif;  font-weight: 400; }
+#nav > a	{ display: none;}
+
+#nav li { position: relative; }
+#nav li a { color: #fff; display: block; -webkit-transition: background-color 300ms ease-out; -moz-transition: background-color 300ms ease-out; transition: background-color 300ms ease-out;}
+#nav li a:active { background-color: #22b0f3 !important;}
+#nav span:after { width: 0; height: 0; border: 0.313em solid transparent; /* 5 */ border-bottom: none; border-top-color: #fff; content: ''; vertical-align: middle; display: inline-block; position: relative; right: -0.313em; /* 5 */}
+/* first level */
+#nav > ul { height: 5em; /* 60 */ background-color: #4dbff5; list-style-type: none; }
+#nav > ul > li	{	width: 150px;	height: 100%; float: left; }
+#nav > ul > li > a {	height: 100%;	font-size: 1em; /* 16 */ line-height: 5em; /* 80 (16) */ 	text-align: center;}
+#nav > ul > li:not( :last-child ) > a { border-right: 1px solid #22b0f3;}
+#nav > ul > li:hover > a,	#nav > ul:not( :hover ) > li.active > a {	background-color: #22b0f3;}
+/* second level */
+#nav li ul { background-color: #22b0f3; display: none; top: 100%; list-style-type: none; width: 280px; text-indent: 10px; margin: 0px}
+#nav li:hover ul { display: block; left: 0; right: 0;}
+#nav li:not( :first-child ):hover ul { left: -1px;}
+#nav li ul a {	font-size: 1em; /* 16 */ border-top: 1px solid #4dbff5; padding: 0.25em; width: 280px; }
+#nav li ul li a:hover, #nav li ul:not( :hover ) li.active a	{ background-color: #4dbff5; }
+
+@media ( max-width: 40em ) /* 1000 */
+{
+	#nav { width: 70%; position: static; margin: 0;}
+}
+
+@media ( max-width: 40em ) /* 640 */
+{
+	html { font-size: 75%;}
+	header { height: 130px;}
+	#nav { position: relative; top: auto; left: auto; }
+	#nav > a { width: 3.125em; /* 50 */ height: 3.125em; /* 50 */ text-align: left; text-indent: -9999px;	background-color: #4dbff5; position: relative; float: right; clear: both;}
+	#nav > a:before,#nav > a:after {	position: absolute; border: 2px solid #fff; top: 35%; left: 25%; right: 25%; content: '';}
+	#nav > a:after	{ top: 60%;}
+	#nav:not( :target ) > a:first-of-type,	#nav:target > a:last-of-type { display: block;}
+	/* first level */
+	#nav > ul {	height: auto; display: none; left: 0; right: 0;  }
+	#nav:target > ul { display: block;}
+	#nav > ul > li { width: 100%; float: none; }
+	#nav > ul > li > a { height: auto; text-align: left; padding: 0 0.833em; /* 20 (24) */}
+	#nav > ul > li:not( :last-child ) > a { border-right: none; border-bottom: 1px solid #22b0f3; }
+	/* second level */
+	#nav li ul { position: static; padding: 1.25em; /* 20 */ padding-top: 0;}
+}
+
+/*-------------------Icons------------------------*/
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.0.3');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+  font-weight: normal;  font-style: normal;}
+
+.fa { display: inline-block; font-family: FontAwesome; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; padding-right: 10px;}
+.fa-gamepad:before { content: "\f11b"; font-size: 1.5em;}
+.fa-edit:before { content: "\f044"; font-size: 1.5em;}
+.fa-film:before { content: "\f008"; font-size: 1.5em;}
+/*-----------------------------------------*/
+.topbar {background-color: #fff;}
