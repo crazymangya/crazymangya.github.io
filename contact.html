@@ -6,7 +6,7 @@
 <meta name="Description" content="">
 <meta name="Keywords" content="">
 <meta name="robots" content="index, follow">
-<link rel="icon" type="image/png" href="favicon.png"> 
+<link rel="icon" type="image/png" href="favicon.png">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link href="css/style.css" rel="stylesheet">
 <link href="css/foundation.css" rel="stylesheet">
@@ -37,22 +37,48 @@
 					<li><a href="mach_skyrim.html"><i class="fa fa-film"></i> Machinima On Skyrim</a></li>
 				</ul></li>
 			<li><a href="about.html">About Me</a></li>
-			<li><a href="cv.html">CV</a></li>    
+			<li><a href="cv.html">CV</a></li>
 			<li><a href="contact.html">Contact Me</a></li>
 		</ul>
 	</nav>
 	</div>
-</div>	
+</div>
 </header>
 <div class="row">
 <div class="content">
 <h2>Contact Me:</h2>
-<div style="margin-left:30px;">
-<?php
-$contact_form = 1; // set desired form number.
-$contact_form_path = '/home/u907427093/public_html/contact-files/'; // set path to /contact-files/ with slash on end.
-require $contact_form_path . 'contact-form-run.php';
-?>
+<div class="is-container">
+		<form id="contactform" method="POST">
+				<input type="hidden" name="_subject" value="Website reply" />
+
+				<div class="is-style">
+						<span>
+<input id="name" placeholder="Your name!" type="text" name="_name" required />
+<label for="name">Name</label>
+</span>
+
+						<span>
+<input id="email" placeholder="Your email address!" type="email" name="_replyto" size="39" required />
+<label for="email">Email</label>
+</span>
+						<input type="text" name="_gotcha" style="display:none" />
+
+						<span>
+<textarea style="padding-top:50px;" id="msg" placeholder="Your message!" name="Message" cols="30" rows="10" required></textarea>
+<label for="msg">Message</label>
+</span>
+				</div>
+
+				<button class="radius button" type="submit">
+						Send It!</button>
+
+				<input type="hidden" name="_next" value="//mangeshthombare.com" />
+
+		</form>
+		<script>
+				var contactform = document.getElementById('contactform');
+				contactform.setAttribute('action', '//formspree.io/' + 'mangeshvt12' + '@' + 'gmail' + '.' + 'com');
+		</script>
 </div>
 </div>
 </div>
@@ -66,10 +92,10 @@ require $contact_form_path . 'contact-form-run.php';
 		$( '#nav li:has(ul)' ).doubleTapToGo();
 	});
 </script>
-<script>
+<!-- <script>
 $(document).ready(function () {
     $('#fsc-submit-1, #fsc-reset-1').addClass('button');
 });
-</script>
+</script> -->
 </body>
 </html>
